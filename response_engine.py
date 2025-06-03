@@ -14,8 +14,7 @@ def generate_response(profile, situation, max_tokens=300):
         model="gpt-4",
         messages=[
             {"role": "system", "content": system_msg.get(profile, "")},
-            {"role": "user", "content": f"상황: {situation}
-이 인격의 시각에서 생각과 반응을 알려줘."}
+            {"role": "user", "content": f"상황: {situation}\n이 인격의 시각에서 생각과 반응을 알려줘."}
         ],
         temperature=1.0,
         max_tokens=max_tokens
